@@ -1,5 +1,5 @@
 {
-    "mongoURI": "mongodb://localhost:27017/mern-auth",
+    "mongoURI": "mongodb+srv://perfectmail1995:hmn4S1ozqBqiGakp@testmern.scmqbkb.mongodb.net/",
     "jwtSecret": "your_jwt_secret"
   }
   
