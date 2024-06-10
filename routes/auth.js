@@ -102,7 +102,7 @@ router.post(
         };
         jwt.sign(
           payload,
-          process.env.JWT_SECRET,
+         "p!W@x$z^9L&*3KqY+1JvTb",
           { expiresIn: 360000 },
           (err, token) => {
             if (err) throw err;
@@ -135,7 +135,7 @@ router.post(
         },
       };
   
-      const resetToken = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '1h' });
+      const resetToken = jwt.sign(payload,"p!W@x$z^9L&*3KqY+1JvTb", { expiresIn: '1h' });
   
       res.json({ resetToken });
     } catch (err) {
@@ -151,7 +151,7 @@ router.post(
     const { token, newPassword } = req.body;
   
     try {
-      const decoded = jwt.verify(token, process.env.JWT_SECRET);
+      const decoded = jwt.verify(token,"p!W@x$z^9L&*3KqY+1JvTb");
       let user = await User.findById(decoded.user.id);
   
       if (!user) {
